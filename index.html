@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. Nishkarsh Gaur — Physician · Public Health · Surgery</title>
+<meta name="description" content="Dr. Nishkarsh Gaur — MBBS physician focused on community public health and surgical care. Medical Officer at Urban Health & Wellness Centre, former Junior Resident at Guru Tegh Bahadur Hospital." />
+<meta name="author" content="Dr. Nishkarsh Gaur" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f5f5f5;
+    --bg-soft: #fafafa;
+    --line: #e4e4e4;
+    --line-strong: #cfcfcf;
+    --muted: #6b6b6b;
+    --text: #1c1c1c;
+    --text-soft: #3a3a3a;
+    --accent: #111111;
+    --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.05);
+    --radius: 14px;
+    --max: 1140px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin: 0;
+  }
+
+  a { color: var(--text); text-decoration: none; transition: opacity .2s ease; }
+  a:hover { opacity: .65; }
+
+  img { max-width: 100%; display: block; }
+
+  .container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ===== NAV ===== */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+  .brand {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .01em;
+  }
+  .brand span { color: var(--muted); font-weight: 400; }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-soft);
+  }
+  .nav-links a { font-weight: 500; }
+  .nav-cta {
+    border: 1px solid var(--text);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all .2s ease;
+  }
+  .nav-cta:hover { background: var(--text); color: #fff; opacity: 1; }
+  .menu-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 6px; }
+  .menu-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px 0; transition: .2s; }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 120px 0 100px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 70px;
+    align-items: center;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--line-strong);
+  }
+  .hero h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--muted);
+    font-weight: 300;
+  }
+  .hero-lede {
+    font-size: 18px;
+    color: var(--text-soft);
+    max-width: 540px;
+    margin-bottom: 36px;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--text);
+    transition: all .2s ease;
+  }
+  .btn-primary { background: var(--text); color: #fff; }
+  .btn-primary:hover { background: #000; opacity: 1; }
+  .btn-ghost:hover { background: var(--text); color: #fff; opacity: 1; }
+  .btn .arrow { transition: transform .2s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* Hero portrait card */
+  .portrait {
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, #efefef 0%, #d9d9d9 100%);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .portrait-mono {
+    font-family: 'Fraunces', serif;
+    font-size: 140px;
+    color: rgba(0,0,0,0.15);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+  }
+  .portrait::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(255,255,255,.6), transparent 50%),
+      radial-gradient(circle at 80% 90%, rgba(0,0,0,.08), transparent 60%);
+  }
+  .portrait-meta {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--line);
+  }
+  .portrait-meta div small { display: block; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }
+  .portrait-meta div strong { font-weight: 500; font-size: 14px; }
+
+  /* ===== STATS STRIP ===== */
+  .stats {
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .stat {
+    padding: 36px 28px;
+    border-right: 1px solid var(--line);
+  }
+  .stat:last-child { border-right: 0; }
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-num span { color: var(--muted); font-weight: 300; }
+  .stat-label {
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 110px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-head {
+    margin-bottom: 60px;
+    max-width: 760px;
+  }
+  .section-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--muted);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-tag::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--text);
+  }
+  .section-title {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+  .section-lede {
+    font-size: 17px;
+    color: var(--text-soft);
+    max-width: 640px;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+  }
+  .about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+  }
+  .chip {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--text-soft);
+  }
+  .about-side p {
+    font-size: 17px;
+    color: var(--text-soft);
+    margin: 0 0 18px;
+  }
+
+  /* ===== TIMELINE / EXPERIENCE ===== */
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .work-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    padding: 38px 0;
+    border-top: 1px solid var(--line);
+    transition: background .2s ease;
+  }
+  .work-item:last-child { border-bottom: 1px solid var(--line); }
+  .work-item:hover { background: var(--bg-soft); }
+  .work-period {
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    padding-top: 4px;
+  }
+  .work-role { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 500; margin-bottom: 4px; }
+  .work-org { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+  .work-desc { font-size: 15.5px; color: var(--text-soft); margin: 0 0 14px; }
+  .work-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .work-tag {
+    font-size: 11.5px;
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+
+  /* ===== PUBLIC HEALTH PILLARS ===== */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .pillar {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    padding: 28px;
+    border-radius: var(--radius);
+    transition: all .25s ease;
+  }
+  .pillar:hover {
+    border-color: var(--text);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+  }
+  .pillar-num {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 18px;
+    display: block;
+  }
+  .pillar h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .pillar p {
+    font-size: 14px;
+    color: var(--text-soft);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* ===== SURGERY SECTION ===== */
+  .surgery-wrap { background: #f5f5f5; }
+  .surgery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .surgery-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .surgery-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .surgery-list li:last-child { border-bottom: 0; }
+  .surgery-name { font-size: 15px; color: var(--text); }
+  .surgery-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--muted);
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 3px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .case-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .case-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .case-card .num {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .case-card .label {
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+  }
+
+  /* ===== RESEARCH / EDU ===== */
+  .three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .col-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px;
+    transition: all .25s ease;
+  }
+  .col-card:hover { border-color: var(--text); box-shadow: var(--shadow); }
+  .col-card h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .col-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .col-card ul li {
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14.5px;
+    color: var(--text-soft);
+  }
+  .col-card ul li:first-child { border-top: 0; padding-top: 0; }
+  .col-card ul li small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  /* ===== CONTACT ===== */
+  .contact-wrap { background: #1c1c1c; color: #f0f0f0; border-bottom: 0; }
+  .contact-wrap .section-tag { color: #888; }
+  .contact-wrap .section-tag::before { background: #888; }
+  .contact-wrap .section-title { color: #fff; }
+  .contact-wrap .section-lede { color: #b8b8b8; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    margin-top: 40px;
+  }
+  .contact-info-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .contact-info-list li {
+    padding: 22px 0;
+    border-bottom: 1px solid #333;
+  }
+  .contact-info-list li:first-child { padding-top: 0; }
+  .contact-info-list small {
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .contact-info-list a, .contact-info-list span {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Fraunces', serif;
+  }
+
+  .form {
+    background: #2a2a2a;
+    padding: 36px;
+    border-radius: var(--radius);
+    border: 1px solid #333;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .form-field { margin-bottom: 16px; }
+  .form-field label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    margin-bottom: 8px;
+  }
+  .form-field input, .form-field textarea, .form-field select {
+    width: 100%;
+    background: #1c1c1c;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color .2s ease;
+  }
+  .form-field input:focus, .form-field textarea:focus, .form-field select:focus {
+    outline: 0;
+    border-color: #fff;
+  }
+  .form-field textarea { min-height: 130px; resize: vertical; }
+  .form-submit {
+    background: #fff;
+    color: #1c1c1c;
+    border: 0;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .form-submit:hover { background: #ddd; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: #111;
+    color: #888;
+    padding: 36px 0;
+    font-size: 13px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer a { color: #ccc; }
+
+  /* ===== UTIL ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .hero { padding: 70px 0 60px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .portrait { max-width: 360px; margin: 0 auto; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat { border-bottom: 1px solid var(--line); }
+    .stat:nth-child(odd) { border-right: 1px solid var(--line); }
+    .stat:nth-child(even) { border-right: 0; }
+    .about-grid, .surgery-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .pillars { grid-template-columns: repeat(2, 1fr); }
+    .three-col { grid-template-columns: 1fr; }
+    .work-item { grid-template-columns: 1fr; gap: 16px; }
+    section { padding: 70px 0; }
+    .form { padding: 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .nav-links.open {
+      display: flex;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      flex-direction: column;
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--line);
+      gap: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">Dr. Nishkarsh Gaur <span>· MBBS</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#public-health">Public Health</a>
+      <a href="#surgery">Surgery</a>
+      <a href="#research">Research</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" style="border-top: 0;">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Physician · Public Health · Surgery</div>
+      <h1>Care that meets people <em>where they live.</em></h1>
+      <p class="hero-lede">
+        I'm Dr. Nishkarsh Gaur — an MBBS physician serving as Medical Officer In-Charge at an Urban Health & Wellness Centre under the Uttar Pradesh National Health Programme, with formal surgical training across burns, plastic, and general procedures at Guru Tegh Bahadur Hospital, Delhi.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Start a conversation <span class="arrow">→</span></a>
+        <a href="#public-health" class="btn btn-ghost">View my work</a>
+      </div>
+    </div>
+    <div>
+      <div class="portrait">
+        <span class="portrait-mono">NG</span>
+        <div class="portrait-meta">
+          <div>
+            <small>Currently</small>
+            <strong>Medical Officer · UPHC</strong>
+          </div>
+          <div style="text-align:right;">
+            <small>Based in</small>
+            <strong>Uttar Pradesh, India</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">60<span>+</span></div>
+        <div class="stat-label">Major surgeries assisted</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">150<span>+</span></div>
+        <div class="stat-label">Minor procedures</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3<span>+</span></div>
+        <div class="stat-label">Years of clinical practice</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Active community health centre</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">About</div>
+      <h2 class="section-title">A clinician grounded in the community, trained at the table.</h2>
+      <p class="section-lede">
+        My practice sits at the intersection of two disciplines that look very different on paper but answer the same question: how do we reduce avoidable suffering? In the OT, that means careful hands and disciplined post-operative care. In the field, it means programmes that reach the household before disease becomes diagnosis.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-side">
+        <p>
+          I completed my MBBS at K.D. Medical College, Mathura, and have since worked across tertiary care, super-speciality, and now primary public-health settings. My clinical foundation is in burns and reconstructive surgery; my current role is in community-level health system delivery for an urban population.
+        </p>
+        <p>
+          I'm particularly interested in the operational side of healthcare — how supply chains, frontline worker training, and clean documentation translate directly into patient outcomes. I document carefully, listen first, and collaborate hard.
+        </p>
+      </div>
+      <div>
+        <h3 style="font-size: 22px; margin-bottom: 8px;">Core competencies</h3>
+        <p style="color: var(--muted); font-size: 14px; margin: 0;">Across clinical, surgical, research, and administrative work.</p>
+        <div class="about-skills">
+          <span class="chip">Patient assessment</span>
+          <span class="chip">Emergency &amp; OPD</span>
+          <span class="chip">Burns &amp; wound care</span>
+          <span class="chip">Surgical assistance</span>
+          <span class="chip">Clinical documentation</span>
+          <span class="chip">Pain &amp; infection management</span>
+          <span class="chip">Health programme delivery</span>
+          <span class="chip">ASHA / FHW training</span>
+          <span class="chip">Field investigations</span>
+          <span class="chip">Clinical trials administration</span>
+          <span class="chip">Biostatistics</span>
+          <span class="chip">Microbiology &amp; pathology lab</span>
+          <span class="chip">Team leadership</span>
+          <span class="chip">Doctor–patient communication</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLIC HEALTH ============ -->
+<section id="public-health" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Public Health</div>
+      <h2 class="section-title">Running an Urban Health &amp; Wellness Centre.</h2>
+      <p class="section-lede">
+        As Medical Officer In-Charge under the Uttar Pradesh National Health Programme (NUHM), I lead a primary-care facility serving an urban catchment — coordinating curative care, preventive outreach, training of frontline workers, and day-to-day administration.
+      </p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-num">01 — Curative</span>
+        <h4>Clinical service delivery</h4>
+        <p>Organising OPD and dispensary, screening referrals from FHWs, ASHAs, and school teachers, and managing emergencies beyond standard OPD hours.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-num">02 — Preventive</span>
+        <h4>Programme implementation</h4>
+        <p>Rolling out National Health &amp; Family Welfare Programmes including NUHM, formulating local health and sanitation plans with ANMs, and conducting field investigations.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-num">03 — Training</span>
+        <h4>Workforce capability</h4>
+        <p>Continuing education for PHC staff and ASHAs, skill-building based on local needs, and maintaining a structured training database for the team.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-num">04 — Administrative</span>
+        <h4>Systems &amp; supply</h4>
+        <p>Inventory and stock registers, drug and vaccine indents, transport upkeep, monthly tour reports, and integrated coordination with AYUSH services.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 80px;">
+      <h3 style="font-size: 26px; margin-bottom: 28px;">Other public &amp; community health work</h3>
+      <div class="work-grid">
+        <div class="work-item">
+          <div class="work-period">2025 — Present</div>
+          <div>
+            <div class="work-role">Medical Officer (In-Charge)</div>
+            <div class="work-org">Urban Health &amp; Wellness Centre · UP National Health Programme</div>
+            <p class="work-desc">Leading a primary care facility under NUHM with full curative, preventive, training, and administrative responsibilities — including coordination with civil administration, community leaders, and welfare agencies.</p>
+            <div class="work-tags">
+              <span class="work-tag">NUHM</span><span class="work-tag">Community Medicine</span><span class="work-tag">Health Systems</span><span class="work-tag">Programme Delivery</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-item">
+          <div class="work-period">May–Jun 2023</div>
+          <div>
+            <div class="work-role">Medical Volunteer</div>
+            <div class="work-org">Mamta International Foundation, Ghaziabad</div>
+            <p class="work-desc">Vital sign assessments and initial clinical evaluations in volunteer health camps; organised patient documentation and supported caregiver communication.</p>
+            <div class="work-tags">
+              <span class="work-tag">Outreach</span><span class="work-tag">NGO</span><span class="work-tag">Field Camps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SURGERY ============ -->
+<section id="surgery" class="surgery-wrap">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Surgical Experience</div>
+      <h2 class="section-title">Burns, plastic, and reconstructive surgery — under faculty supervision.</h2>
+      <p class="section-lede">
+        My surgical training is centred on the Burns and Plastic Surgery unit at Guru Tegh Bahadur Hospital, New Delhi, with additional rotations through general surgery, emergency, and OPD clinics. Procedural exposure spans grafting, debridement, and reconstructive work.
+      </p>
+    </div>
+
+    <div class="surgery-grid">
+      <div>
+        <h3 style="font-size: 22px; margin-bottom: 20px;">Procedures performed under supervision</h3>
+        <ul class="surgery-list">
+          <li><span class="surgery-name">Split-thickness skin graft (SSG)</span><span class="surgery-tag">Burns / Plastic</span></li>
+          <li><span class="surgery-name">Wound debridement</span><span class="surgery-tag">Burns / Trauma</span></li>
+          <li><span class="surgery-name">Rhinoplasty</span><span class="surgery-tag">Reconstructive</span></li>
+          <li><span class="surgery-name">Scrotoplasty</span><span class="surgery-tag">Reconstructive</span></li>
+          <li><span class="surgery-name">Amputation</span><span class="surgery-tag">General</span></li>
+          <li><span class="surgery-name">Acute burn dressings &amp; daily rounds</span><span class="surgery-tag">Burns Care</span></li>
+          <li><span class="surgery-name">Perioperative &amp; post-op follow-up</span><span class="surgery-tag">Continuity</span></li>
+          <li><span class="surgery-name">Emergency surgical assessment</span><span class="surgery-tag">ER</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size: 22px; margin-bottom: 8px;">Case volume snapshot</h3>
+        <p style="color: var(--muted); font-size: 14px; margin: 0 0 8px;">Documented during Junior Residency, Guru Tegh Bahadur Hospital (2024).</p>
+        <div class="case-stats">
+          <div class="case-card">
+            <div class="num">60</div>
+            <div class="label">Major surgeries</div>
+          </div>
+          <div class="case-card">
+            <div class="num">150</div>
+            <div class="label">Minor procedures</div>
+          </div>
+        </div>
+        <div class="case-card" style="margin-top: 16px;">
+          <div class="label" style="margin-bottom: 8px;">Active research</div>
+          <div style="font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.4;">
+            Role of antibiotics and the necessity of blood cultures in burn patients.
+          </div>
+          <p style="color: var(--muted); font-size: 13.5px; margin: 12px 0 0;">Ongoing clinical investigation initiated during JR posting at GTB Hospital, Department of Burns &amp; Plastic Surgery.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 80px;">
+      <h3 style="font-size: 26px; margin-bottom: 28px;">Clinical &amp; surgical postings</h3>
+      <div class="work-grid">
+        <div class="work-item">
+          <div class="work-period">Feb — Dec 2024</div>
+          <div>
+            <div class="work-role">Junior Resident Doctor</div>
+            <div class="work-org">Guru Tegh Bahadur Hospital · New Delhi</div>
+            <p class="work-desc">Daily rounds, patient assessments, dressing of acute burns and wounds, and surgical assistance under faculty supervision. Contributed to perioperative care and post-op follow-up across the burns and plastic surgery unit.</p>
+            <div class="work-tags">
+              <span class="work-tag">Burns &amp; Plastic</span><span class="work-tag">SSG</span><span class="work-tag">Debridement</span><span class="work-tag">Reconstruction</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-item">
+          <div class="work-period">Jul 2023 — Feb 2024</div>
+          <div>
+            <div class="work-role">Resident Medical Officer</div>
+            <div class="work-org">Yashoda Super-speciality Hospital &amp; Research Centre · UP</div>
+            <p class="work-desc">Patient assessments and consultations, preventive and wellness counselling, and assistance to the Head of Surgery in ongoing clinical research. Maintained clinical logs and participated in academic seminars.</p>
+            <div class="work-tags">
+              <span class="work-tag">Super-speciality</span><span class="work-tag">Surgical Research</span><span class="work-tag">Inpatient Care</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-item">
+          <div class="work-period">Apr 2022 — Apr 2023</div>
+          <div>
+            <div class="work-role">Doctor (Internship)</div>
+            <div class="work-org">K.D. Medical College · Mathura</div>
+            <p class="work-desc">Rotated across departments with detailed patient assessments, preventive counselling, and research support. Independently managed an ongoing study comparing serum Vitamin A levels in newborns with anorectal malformation and their mothers vs. normal controls.</p>
+            <div class="work-tags">
+              <span class="work-tag">Internship</span><span class="work-tag">Multispeciality</span><span class="work-tag">Paediatric Research</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH / EDU / CERTS ============ -->
+<section id="research">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Research, Education &amp; Credentials</div>
+      <h2 class="section-title">Curiosity that follows the patient through the lab and back.</h2>
+      <p class="section-lede">
+        I keep a clinician's interest in the data behind decisions — particularly antimicrobial use, micronutrient correlations, and perioperative protocols — and pair it with continuing medical education from international institutions.
+      </p>
+    </div>
+
+    <div class="three-col">
+      <div class="col-card">
+        <h4>Research projects</h4>
+        <ul>
+          <li>Role of antibiotics &amp; necessity of blood cultures in burn patients
+            <small>Ongoing · GTB Hospital, Burns &amp; Plastic Surgery</small>
+          </li>
+          <li>Comparative study of serum Vitamin A in neonates with anorectal malformation vs. controls (mother–infant pairs)
+            <small>Internship · K.D. Medical College</small>
+          </li>
+          <li>Clinical research support for Head of Surgery
+            <small>Yashoda Super-speciality Hospital</small>
+          </li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>Education</h4>
+        <ul>
+          <li>M.B.B.S
+            <small>K.D. Medical College Hospital &amp; Research Centre, Mathura · 03/2022</small>
+          </li>
+          <li>BLS &amp; ACLS
+            <small>American Heart Association</small>
+          </li>
+          <li>Languages
+            <small>English · Hindi · German</small>
+          </li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>Continuing education</h4>
+        <ul>
+          <li>Bacterial Genomes &amp; Antimicrobial Resistance
+            <small>University of Cambridge</small>
+          </li>
+          <li>Atrial Fibrillation Management
+            <small>Harvard Medical School</small>
+          </li>
+          <li>Cardiovascular Complications of COVID-19
+            <small>Harvard Medical School</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact-wrap">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Get in Touch</div>
+      <h2 class="section-title">For collaborations, consultations, or a quick conversation.</h2>
+      <p class="section-lede">
+        Whether it's a research collaboration, a public-health programme, a clinical opportunity, or just a thoughtful question — I'd be glad to hear from you.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <ul class="contact-info-list">
+          <li>
+            <small>Email</small>
+            <a href="mailto:work@drnishkarsh.com">work@drnishkarsh.com</a>
+          </li>
+          <li>
+            <small>Based in</small>
+            <span>Uttar Pradesh, India</span>
+          </li>
+          <li>
+            <small>Website</small>
+            <a href="https://www.drnishkarsh.com">www.drnishkarsh.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="form" id="contactForm" onsubmit="return sendMail(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>General enquiry</option>
+            <option>Research collaboration</option>
+            <option>Public health / NGO</option>
+            <option>Clinical opportunity</option>
+            <option>Speaking / academic</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Send message <span style="font-size: 16px;">→</span>
+        </button>
+        <p style="font-size: 12px; color: #888; margin: 14px 0 0;">Submitting opens your email client with the message pre-filled.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span id="yr"></span> Dr. Nishkarsh Gaur · MBBS · All rights reserved.</div>
+    <div>
+      <a href="mailto:work@drnishkarsh.com">Email</a> &nbsp;·&nbsp;
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mailto handler
+  function sendMail(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var topic = document.getElementById('topic').value;
+    var message = document.getElementById('message').value;
+    var subject = encodeURIComponent('[' + topic + '] from ' + name);
+    var body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Topic: ' + topic + '\n\n' +
+      message
+    );
+    window.location.href = 'mailto:work@drnishkarsh.com?subject=' + subject + '&body=' + body;
+    return false;
+  }
+
+  // Reveal on scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) {
+        en.target.classList.add('in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('section, .stat, .pillar, .work-item, .col-card, .case-card').forEach(function(el){
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
